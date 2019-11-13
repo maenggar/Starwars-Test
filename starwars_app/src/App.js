@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './pages/Home';
 import { createMuiTheme,ThemeProvider,responsiveFontSizes } from '@material-ui/core/styles';
+import { SignIn, SignOUt } from './components';
 
 
 let theme = createMuiTheme({
@@ -13,11 +14,11 @@ let theme = createMuiTheme({
     },
     secondary: {
       light: '#616161',
-      main: '#424242',
+      main:  '#b71c1c',
       dark: '#010101',
       //contrastText: getContrastText(palette.secondary.A400),
     },
-    countain: {
+    error: {
       light: '#e53935',
       main: '#d50000',
       dark: '#b71c1c',
@@ -33,7 +34,7 @@ function App() {
   return (
     <div>
       <ThemeProvider theme={theme}>
-       <Home/>
+       <SignIn/>
       </ThemeProvider>
     </div>
   );
