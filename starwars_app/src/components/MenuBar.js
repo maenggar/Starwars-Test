@@ -18,6 +18,10 @@ const useStyles = makeStyles(theme => ({
     },
     menuButton: {
       flexGrow:1,
+      color:theme.palette.primary
+    },
+    tabLabel:{
+      color:theme.palette.primary.light
     },
     title: {
       flexGrow: 1,
@@ -27,6 +31,11 @@ const useStyles = makeStyles(theme => ({
 
 function MenuBar(){
     const classes = useStyles();
+    const [value, setValue] = React.useState(1);
+
+    const handleChange = (event, newValue) => {
+      setValue(newValue);
+    };
 
     return (
       <div className={classes.root}>
@@ -37,14 +46,15 @@ function MenuBar(){
             </Typography>
             <Tabs
                     className={classes.menuButton}
-                    value={1}
-                    indicatorColor="primary"
-                    textColor="primary"
+                    value={value}
+                    onChange={handleChange}
+                    indicatorColor="secondary"
+                    textColor="secondary"
                     centered
             >
-                 <Tab label="Home" />
-                 <Tab label="Movies" />
-                 <Tab label="Episodes" />
+                 <Tab label="Home" className={classes.tabLabel}/>
+                 <Tab label="Movies" className={classes.tabLabel} />
+                 <Tab label="Episodes" className={classes.tabLabel} />
             </Tabs>
             <Button color="primary">Login</Button>
           </Toolbar>

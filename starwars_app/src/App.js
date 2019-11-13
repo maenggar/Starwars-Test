@@ -10,7 +10,7 @@ let theme = createMuiTheme({
       light: '#fafafa',
       main: '#f5f5f5',
       dark: '#e0e0e0',
-     // contrastText: getContrastText(palette.primary[500]),
+    // contrastText: getContrastText(palette.primary[500]),
     },
     secondary: {
       light: '#616161',
@@ -22,7 +22,7 @@ let theme = createMuiTheme({
       light: '#e53935',
       main: '#d50000',
       dark: '#b71c1c',
-      //contrastText: getContrastText(palette.error[500]),
+     // contrastText: getContrastText(palette.error[500]),
     },
   },
 });
@@ -34,7 +34,7 @@ function App() {
   return (
     <div>
       <ThemeProvider theme={theme}>
-       <SignIn/>
+       <Home/>
       </ThemeProvider>
     </div>
   );
