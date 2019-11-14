@@ -8,9 +8,11 @@ import Footer from "../components/Footer";
 
 const useStyle=makeStyles( theme=>({
     root:{
-        clipPath: 'polygon(50% 0%, 100% 0, 100% 85%, 60% 100%, 0 86%, 0 0)',
         backgroundColor: theme.palette.primary.light
     },
+    image:{
+        clipPath:'polygon(50% 0%, 100% 0, 100% 85%, 60% 100%, 0 86%, 0 0)'
+    }
 }))
 
 
@@ -18,9 +20,9 @@ const useStyle=makeStyles( theme=>({
 function Home(){
     const classes=useStyle()
     return(
-        <div>
+        <div className={classes.root}>
             <MenuBar/>
-             <img src={BackgroundImage} alt="StarWars background" width="100%" className={classes.root}/>
+             <img src={BackgroundImage} alt="StarWars background" width="100%" className={classes.image}/>
              <Movies/>
              <About/>
              <Footer/>
