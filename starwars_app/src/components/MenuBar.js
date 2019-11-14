@@ -54,7 +54,7 @@ function MenuBar(){
             >
                  <Tab label="Home" className={classes.tabLabel}/>
                  <Tab label="Movies" className={classes.tabLabel} />
-                 <Tab label="Episodes" className={classes.tabLabel} />
+                 <Tab label="About" className={classes.tabLabel} />
             </Tabs>
             <Button color="primary">Login</Button>
           </Toolbar>

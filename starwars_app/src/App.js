@@ -7,7 +7,7 @@ import { SignIn, SignOUt } from './components';
 let theme = createMuiTheme({
   palette: {
     primary: {
-      light: '#fafafa',
+      light: '#fff',
       main: '#f5f5f5',
       dark: '#e0e0e0',
     // contrastText: getContrastText(palette.primary[500]),
