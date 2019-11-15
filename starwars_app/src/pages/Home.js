@@ -5,7 +5,6 @@ import BackgroundImage from "../assets/starwars.jpg";
 import About from "./about";
 import Movies from "./Movies";
 import Footer from "../components/Footer";
-import Store from "../store";
 
 const useStyle=makeStyles( theme=>({
     root:{
@@ -15,8 +14,6 @@ const useStyle=makeStyles( theme=>({
         clipPath:'polygon(50% 0%, 100% 0, 100% 85%, 60% 100%, 0 86%, 0 0)'
     }
 }))
-
-
 
 function Home(){
     const classes=useStyle()

@@ -10,6 +10,9 @@ import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles(theme => ({
     toolbar:{
+        display:"flex",
+        alignItems:"center",
+        justifyContent:"center",
         backgroundColor:theme.palette.secondary.dark
     },
   }));
@@ -17,11 +20,11 @@ const useStyles = makeStyles(theme => ({
   function Copyright() {
     return (
        <div> 
-        <Typography variant="body2" color="primary" align="center">
+        <Typography variant="body2" color="primary">
             {'Copyright © '}
             <Link color="inherit" href="#">
-            StarWars
-            </Link>{' '}
+               StarWars
+            </Link>
             {new Date().getFullYear()}
             {'.'}
         </Typography>
@@ -33,8 +36,8 @@ function Footer(){
     const classes = useStyles();
 
     return (
-      <div className={classes.root}>
-        <AppBar position="sticky">
+      <div>
+        <AppBar position="fluid">
           <Toolbar className={classes.toolbar}>
             <Copyright/>
           </Toolbar>
