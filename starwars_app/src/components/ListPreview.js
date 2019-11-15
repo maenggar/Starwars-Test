@@ -1,7 +1,33 @@
 import React, { useEffect, useState, Fragment } from "react";
 import axios from "axios";
-import BaseUrl from "../config/BaseUrl"
+import BaseUrl from "../config/BaseUrl";
+import {Link as RouterLink} from "react-router-dom";
 import { List,ListItem,ListItemAvatar,ListItemText,Avatar,Typography,Divider} from "@material-ui/core";
+
+
+
+function ListItemLink(props) {
+    const { to } = props;
+  
+    const renderLink = React.useMemo(
+      () =>
+        React.forwardRef((itemProps, ref) => (
+          // With react-router-dom@^6.0.0 use `ref` instead of `innerRef`
+          // See https://github.com/ReactTraining/react-router/issues/6056
+          <RouterLink to={to} {...itemProps} innerRef={ref} />
+        )),
+      [to],
+    );
+  
+    return (
+      <li>
+        <ListItem button component={renderLink}>
+          <ListItemText/>
+        </ListItem>
+      </li>
+    );
+  }
+
 
 
 function ListPreview(){
@@ -16,9 +42,10 @@ function ListPreview(){
     return(
          <div>
             <List>{film.map( item =>(
-                       <Fragment>
-                           <ListItem button alignItems="flex-start">
-                                <ListItemAvatar>
+                       
+                       <Fragment>    
+                            <ListItem button alignItems="flex-start">
+                                <ListItemAvatar>z`z 
                                   <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
                                 </ListItemAvatar>
                                 <ListItemText
@@ -55,14 +82,14 @@ function ListPreview(){
                                         //className={classes.inline}
                                         color="textPrimary"
                                     >
-                                        Realease : {item.release_date}
+                                        Rex lease : {item.release_date}
                                     </Typography>
                                  </div>
                                 }
                                 />
                             </ListItem>
                             <Divider variant="inset" component="li" />  
-                </Fragment>  
+                       </Fragment>  
              )) 
             } 
             </List>
