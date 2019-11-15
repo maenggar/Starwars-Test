@@ -5,6 +5,7 @@ import BackgroundImage from "../assets/starwars.jpg";
 import About from "./about";
 import Movies from "./Movies";
 import Footer from "../components/Footer";
+import Store from "../store";
 
 const useStyle=makeStyles( theme=>({
     root:{
@@ -26,6 +27,7 @@ function Home(){
              <Movies/>
              <About/>
              <Footer/>
+             <Store/>
         </div>
     )
 }export default Home
