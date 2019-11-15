@@ -6,18 +6,17 @@ export default function Store() {
 
   useEffect(() => {
     axios
-      .get("https://jsonplaceholder.typicode.com/users")
-      .then(results => setData(results.data));
-      console.log(data)
+      .get("https://swapi.co/api/films/")
+      
+      .then(result => setData(result.data.results));
   }, []);
-
+  console.log(data)
   return (
-    
     <div>
       <ul>
-        {data.map(result => (
-          <li key={result.title}>
-            {result.title}: {result.title}
+        {data.map((item) => (
+          <li key={item}>
+            Title: {item.title}
           </li>
         ))}
       </ul>
