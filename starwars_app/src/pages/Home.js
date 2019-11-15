@@ -27,7 +27,6 @@ function Home(){
              <Movies/>
              <About/>
              <Footer/>
-             <Store/>
         </div>
     )
 }export default Home

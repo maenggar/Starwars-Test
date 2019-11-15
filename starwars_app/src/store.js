@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import BaseUrl from "./config/BaseUrl"
 
 export default function Store() {
-  const [data, setData] = useState([]);
+  const [film, setFilm] = useState([]);
 
   useEffect(() => {
     axios
-      .get("https://swapi.co/api/films/")
-      
-      .then(result => setData(result.data.results));
+      .get(BaseUrl.API+"films/") 
+      .then(result => setFilm(result.data.results));
   }, []);
-  console.log(data)
   return (
     <div>
       <ul>
-        {data.map((item) => (
+        {film.map((item) => (
           <li key={item}>
             Title: {item.title}
           </li>
