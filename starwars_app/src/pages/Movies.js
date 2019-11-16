@@ -45,14 +45,16 @@ function Movies() {
             <Grid container spacing={3}>
               <Grid item lg={4}>
                 {film.map(item => (
-                  <ListPreview
-                    title={item.title}
-                    episode={item.episode_id}
-                    director={item.director}
-                    producer={item.producer}
-                    release={item.release_date}
-                    Link={<Link to={`${url}episode_id`} />}
-                  />
+                  <div>
+                    <ListPreview
+                      title={item.title}
+                      episode={item.episode_id}
+                      director={item.director}
+                      producer={item.producer}
+                      release={item.release_date}
+                    />
+                    <Link to={`${url}${item.episode_id}`}>detail</Link>
+                  </div>
                 ))}
               </Grid>
               <Grid item lg={8}>
