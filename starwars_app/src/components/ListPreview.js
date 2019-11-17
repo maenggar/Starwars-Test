@@ -1,7 +1,4 @@
-import React, { useEffect, useState, Fragment } from "react";
-import axios from "axios";
-import BaseUrl from "../config/BaseUrl";
-import { Link, Switch, Route, useRouteMatch } from "react-router-dom";
+import React, { Fragment } from "react";
 import {
   List,
   ListItem,
@@ -11,7 +8,6 @@ import {
   Typography,
   Divider
 } from "@material-ui/core";
-import DetailPreview from "./DetailPreview";
 
 function ListPreview(props) {
   return (
@@ -54,7 +50,6 @@ function ListPreview(props) {
                   >
                     Release : {props.release}
                   </Typography>
-                  {/* <Link to={`${url}detail1`}>link</Link> */}
                 </div>
               }
             />

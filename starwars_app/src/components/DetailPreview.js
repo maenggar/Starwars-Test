@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import { Card, Grid, Typography, Divider, Paper } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import { Card, Grid, Divider, Paper, Typography } from "@material-ui/core";
 import { useParams } from "react-router-dom";
 
 function DetailPreview(props) {
-  let films = useState(props.films);
+  let [filmsx] = useState([props.films]);
   let { id } = useParams();
 
-  console.log(id, "id dari params");
+  console.log(filmsx, "id dari params");
 
   return (
     <div>
@@ -16,12 +15,8 @@ function DetailPreview(props) {
         <Grid container spacing={3}>
           <Grid item md>
             <h3>{`DETAIL:${id}`}</h3>
-            <ul>
-              <li key={films[0][id - 1].episode_id}>
-                <Typography>{films[0][id - 1].title}</Typography>
-                <Typography>{films[0][id - 1].opening_crawl}</Typography>
-              </li>
-            </ul>
+            <Typography>{filmsx[[id].title]}</Typography>
+            <Typography>{filmsx[[id].opening_crawl]}</Typography>
           </Grid>
         </Grid>
         <Grid container>

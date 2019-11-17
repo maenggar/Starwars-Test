@@ -60,7 +60,7 @@ function Movies() {
               <Grid item lg={8}>
                 <Switch>
                   <Route path={`${path}:id`}>
-                    <DetailPreview />
+                    <DetailPreview films={film.title} />
                   </Route>
                 </Switch>
               </Grid>
